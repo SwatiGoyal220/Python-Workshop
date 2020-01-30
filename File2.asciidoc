@@ -1,0 +1,244 @@
+=== Q1 Even or odd
+
+
++*In[19]:*+
+[source, ipython3]
+----
+print("Enter a number")
+a=int(input())
+if a%2==0:
+    print(a, "is even")
+else:
+    print(a, "is odd")
+----
+
+
++*Out[19]:*+
+----
+Enter a number
+10
+10 is even
+----
+
+=== Q2 Leap year or not
+
+
++*In[20]:*+
+[source, ipython3]
+----
+a=int(input("Enter the year: "))
+if (a % 4) == 0:
+   if (a % 100) == 0:
+       if (a % 400) == 0:
+           print(a, "is a leap year")
+       else:
+           print(a, "is not a leap year")
+   else:
+       print(a, "is a leap year")
+else:
+   print(a, "is not a leap year")
+----
+
+
++*Out[20]:*+
+----
+Enter the year: 2020
+2020 is a leap year
+----
+
+=== Q3 Vowel or consonant
+
+
++*In[21]:*+
+[source, ipython3]
+----
+ch=input("Enter a character: ")
+if ch=='a' or ch=='e' or ch=='i' or ch=='o' or ch=='u'or ch=='A' or ch=='E' or ch=='i' or ch=='o' or ch=='u':
+    print(ch, "is vowel")
+else:
+    print(ch, "is consonant")
+----
+
+
++*Out[21]:*+
+----
+Enter a character: i
+i is vowel
+----
+
+=== Q4 Find smallest of 2 nos.
+
+
++*In[22]:*+
+[source, ipython3]
+----
+num1=int(input("Enter a number: "))
+num2=int(input("Enter second number: "))
+if num1<num2:
+    print("Num1,", num1, "is smallest")
+elif num2<num1:
+    print("Num2,", num2, "is smallest")
+else:
+    print("Both number are equal.")
+----
+
+
++*Out[22]:*+
+----
+Enter a number: 23
+Enter second number: 30
+Num1, 23 is smallest
+----
+
+=== Q5 Factorial
+
+
++*In[24]:*+
+[source, ipython3]
+----
+num=int(input("Enter the number: "))
+fact=1
+if num==0:
+    fact=1
+else:
+    for i in range (1, num+1):
+        fact=fact*i
+print("Fcatorial of", num, "is:", fact)
+----
+
+
++*Out[24]:*+
+----
+Enter the number: 5
+Fcatorial of 5 is: 120
+----
+
+=== Q6: Pattern printing
+
+
++*In[10]:*+
+[source, ipython3]
+----
+rows=5
+for i in range (0, rows):
+    for j in range (0,rows-i-1) :
+        print(end=" ")
+    for j in range(0, i + 1):
+        print("*", end=" ")
+    print("\r")
+
+----
+
+
++*Out[10]:*+
+----
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+----
+
+=== Q7 Fibonnaci Series
+
+
++*In[25]:*+
+[source, ipython3]
+----
+def fibonacci(n): 
+    a = 0
+    b = 1
+    if n < 0: 
+        print("Incorrect input") 
+    elif n == 0: 
+        return a 
+    elif n == 1: 
+        return b 
+    else: 
+        print(a)
+        print(b)
+        for i in range(2,n): 
+           
+            c = a + b 
+            print(c)
+            a = b 
+            b = c 
+        return b
+print(fibonacci(9)) 
+----
+
+
++*Out[25]:*+
+----
+0
+1
+1
+2
+3
+5
+8
+13
+21
+21
+----
+
+=== Q8 Prime or not
+
+
++*In[26]:*+
+[source, ipython3]
+----
+n=int(input("Enter the number: "))
+if n==0 or n==1:
+    print("The number is neither prime nor composite.")
+elif n>1:
+    for i in range (2,n):
+        if n%i==0:
+            print("Number is not prime")
+            break
+    else:
+            print("Number is prime")
+else:
+    print("Not prime")
+----
+
+
++*Out[26]:*+
+----
+Enter the number: 17
+Number is prime
+----
+
+=== Q9 Calculator
+
+
++*In[31]:*+
+[source, ipython3]
+----
+n=input("Enter the operator: ")
+n1=int(input("Enter the first no:"))
+n2=int(input("Enter the second no:"))
+if n=="+":
+    sum=n1+n2
+    print("Sum is:", sum)
+elif n=="-":
+    diff=n1-n2
+    print("Difference is:", diff)
+elif n=="*":
+    product=n1*n2
+    print("Product is: ", product)
+elif n=="/":
+    div=n1/n2
+    print("The division is:", div)
+else:
+    print("Invalid operator")
+----
+
+
++*Out[31]:*+
+----
+Enter the operator: *
+Enter the first no:5
+Enter the second no:10
+Product is:  50
+----
