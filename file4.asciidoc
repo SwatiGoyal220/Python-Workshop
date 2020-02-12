@@ -1,0 +1,399 @@
+﻿=== practice questions
+
+
++*In[38]:*+
+[source, ipython3]
+----
+var1=()
+----
+
+
++*In[39]:*+
+[source, ipython3]
+----
+var1
+----
+
+
++*Out[39]:*+
+----()----
+
+
++*In[40]:*+
+[source, ipython3]
+----
+var2=(1,2,3,4)
+----
+
+
++*In[41]:*+
+[source, ipython3]
+----
+var2
+----
+
+
++*Out[41]:*+
+----(1, 2, 3, 4)----
+
+
++*In[42]:*+
+[source, ipython3]
+----
+var3=(1,"a",False)
+----
+
+
++*In[43]:*+
+[source, ipython3]
+----
+var3
+----
+
+
++*Out[43]:*+
+----(1, 'a', False)----
+
+
++*In[44]:*+
+[source, ipython3]
+----
+var3[2]
+----
+
+
++*Out[44]:*+
+----False----
+
+
++*In[45]:*+
+[source, ipython3]
+----
+var4=var3+(6,)
+----
+
+
++*In[46]:*+
+[source, ipython3]
+----
+str1=" "
+----
+
+
++*In[47]:*+
+[source, ipython3]
+----
+var4=("a","b","c")
+----
+
+
++*In[48]:*+
+[source, ipython3]
+----
+str1=str1.join(var4)
+----
+
+
++*In[49]:*+
+[source, ipython3]
+----
+str1
+----
+
+
++*Out[49]:*+
+----'a b c'----
+
+
++*In[50]:*+
+[source, ipython3]
+----
+var2[2]+var2[-1]
+----
+
+
++*Out[50]:*+
+----7----
+
+
++*In[51]:*+
+[source, ipython3]
+----
+var5=(1,1,1,2,3)
+----
+
+
++*In[52]:*+
+[source, ipython3]
+----
+var5.count(1)
+----
+
+
++*Out[52]:*+
+----3----
+
+
++*In[57]:*+
+[source, ipython3]
+----
+if "a" in var5:
+    print('present')
+else:
+    print('np')
+----
+
+
++*Out[57]:*+
+----
+np
+----
+
+
++*In[61]:*+
+[source, ipython3]
+----
+var5
+----
+
+
++*Out[61]:*+
+----(1, 1, 1, 2, 3)----
+
+
++*In[62]:*+
+[source, ipython3]
+----
+var5[0:3],var5[-2:-1]
+----
+
+
++*Out[62]:*+
+----((1, 1, 1), (2,))----
+
+
++*In[63]:*+
+[source, ipython3]
+----
+print(var5[0:3])
+----
+
+
++*Out[63]:*+
+----
+(1, 1, 1)
+----
+
+
++*In[64]:*+
+[source, ipython3]
+----
+len(var5)
+----
+
+
++*Out[64]:*+
+----5----
+
+
++*In[65]:*+
+[source, ipython3]
+----
+var5.index(3)
+----
+
+
++*Out[65]:*+
+----4----
+
+== Que1: create a tuple
+
+
++*In[66]:*+
+[source, ipython3]
+----
+tuple1=(1,2,3)
+tuple1
+----
+
+
++*Out[66]:*+
+----(1, 2, 3)----
+
+== Que2: create a tuple with different datatypes
+
+
++*In[67]:*+
+[source, ipython3]
+----
+tuple2=(1,"a","Swati")
+tuple2
+----
+
+
++*Out[67]:*+
+----(1, 'a', 'Swati')----
+
+== Que3: create numbers’ tuple & print 1 item
+
+
++*In[68]:*+
+[source, ipython3]
+----
+tuple3=(1,2,3,4)
+print(tuple3[1])
+----
+
+
++*Out[68]:*+
+----
+2
+----
+
+== Que4: unpack a tuple in several variables
+
+
++*In[69]:*+
+[source, ipython3]
+----
+print('Tuple before unpacking: ', tuple3)
+v1, v2, *v3 = tuple3
+print('tuple after unpacking: ', v1, v2, v3)
+----
+
+
++*Out[69]:*+
+----
+Tuple before unpacking:  (1, 2, 3, 4)
+tuple after unpacking:  1 2 [3, 4]
+----
+
+== Que5: Add an item in a tuple
+
+
++*In[19]:*+
+[source, ipython3]
+----
+tuple1=(1,2,3)
+tuple1=tuple1+(5,)
+print('modified tuple: ',tuple1)
+----
+
+
++*Out[19]:*+
+----
+modified tuple:  (1, 2, 3, 5)
+----
+
+== Que6: Convert tuple into a string
+
+
++*In[71]:*+
+[source, ipython3]
+----
+tuple4=("Swati", "Goyal")
+str2=" "
+str2=str2.join(tuple4)
+str2
+----
+
+
++*Out[71]:*+
+----'Swati Goyal'----
+
+== Que7 program to get the 4th element and 4th element from last of a
+tuple
+
+
++*In[72]:*+
+[source, ipython3]
+----
+tuple5=(1,2,3,4,5,6,7,8,9,10)
+print(tuple5[4],tuple5[-4])
+----
+
+
++*Out[72]:*+
+----
+5 7
+----
+
+== Que8 to create the colon of a tuple
+
+== Que9: count repetitive elements of a tuple
+
+
++*In[73]:*+
+[source, ipython3]
+----
+tuple6=(1,1,1,2,3,4)
+tuple6.count(1)
+----
+
+
++*Out[73]:*+
+----3----
+
+== Que10: Whether an element exist or not
+
+
++*In[74]:*+
+[source, ipython3]
+----
+if 4 in tuple6:
+    print("Present")
+else:
+    print("Not present")
+----
+
+
++*Out[74]:*+
+----
+Present
+----
+
+== Que11: convert list to a tuple
+
+
++*In[29]:*+
+[source, ipython3]
+----
+l2=[1,2,3,4]
+tuple7=tuple(l2)
+tuple7
+----
+
+
++*Out[29]:*+
+----
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-29-b46de24d8ecf> in <module>
+          1 l2=[1,2,3,4]
+    ----> 2 tuple7=tuple(l2)
+          3 tuple7
+    
+
+    TypeError: 'tuple' object is not callable
+
+----
+
+== Que12: Remove item from tuple
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
