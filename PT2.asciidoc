@@ -1,0 +1,201 @@
+= Name: Swati goyal
+
+= Roll no.: 2k18CSUN01042
+
+= Class: Btech CSE 4b
+
+= Pt2
+
+= Viva Questions
+
+=== 1. What is the difference between both the codes and what will be
+the output from the following codes if applied to a list of numbers
+
+=== a) For I in range (0,4): print I
+
+=== b) For I in list: print I
+
+
++*In[90]:*+
+[source, ipython3]
+----
+list2=[1,2,3,4]
+for I in range (0,4): 
+    print(I)
+----
+
+
++*Out[90]:*+
+----
+0
+1
+2
+3
+----
+
+
++*In[91]:*+
+[source, ipython3]
+----
+for i in list2:
+    print(i)
+----
+
+
++*Out[91]:*+
+----
+1
+2
+3
+4
+----
+
+==== Ans: Thus, a will print numbers from 0 to 3 as range is defined as
+numbers while part (b) will give output as elements present in the list
+of numbers defined above.
+
+=== 2. What is the output for the following
+
+=== word=’abcdefghij’
+
+=== word[:3]+word[3:]
+
+
++*In[93]:*+
+[source, ipython3]
+----
+word='abcdefghij'
+word[:3]+word[3:]
+
+----
+
+
++*Out[93]:*+
+----'abcdefghij'----
+
+=== 3. How do you convert a list (containing words) to string
+
+
++*In[97]:*+
+[source, ipython3]
+----
+list3=['hello','world']
+listToStr = ' '.join(map(str, list3))
+listToStr
+----
+
+
++*Out[97]:*+
+----'hello world'----
+
+= Practical Questions
+
+=== Q1.a) Input a list of 10 numbers from user. Identify prime, even,
+odd, positive, negative numbers and 0’s in the list. Store these number
+in individual list and print all the list even if a list is empty.
+
+
++*In[29]:*+
+[source, ipython3]
+----
+list1 = [11, 21, 10, 45, 66, 93,113] 
+Prime=[]
+Evens=[]
+Odds=[]
+Positive=[]
+Negative=[] 
+Zeroes=[]
+
+for i in list1:
+    
+    # Assume number is prime until shown it is not. 
+    isPrime = True
+    for num in range(2, i):
+        if i % num == 0:
+            isPrime = False
+      
+    if isPrime:
+        Prime.append(i)     
+
+    if(i%2==0):
+        Evens.append(i)
+    else:
+        Odds.append(i)
+    if(i>0):
+        Positive.append(i)
+    elif(i==0):
+        Zeroes.append(i)
+    else:
+        Negative.append(i)
+    
+print("Primes are: ",Prime)
+print("Even: ",Evens)
+print("Odd: ",Odds)
+print("Positive: ",Positive)
+print("Negative: ",Negative)
+print("Zeroes: ",Zeroes)
+----
+
+
++*Out[29]:*+
+----
+Primes are:  [11, 113]
+Even:  [10, 66]
+Odd:  [11, 21, 45, 93, 113]
+Positive:  [11, 21, 10, 45, 66, 93, 113]
+Negative:  []
+Zeroes:  []
+----
+
+=== 1) b) Merge all the list in the following order: zero’s, positive
+num, even num’s, negative num’s, odd num’s and prime num’s
+
+
++*In[36]:*+
+[source, ipython3]
+----
+Final_List=Zeroes+Positive+Evens+Negative+Odds+Prime
+Final_List
+----
+
+
++*Out[36]:*+
+----[11, 21, 10, 45, 66, 93, 113, 10, 66, 11, 21, 45, 93, 113, 11, 113]----
+
+=== 1) c) Sort the list in ascending order using bubble sort and print
+it by making a sort function.
+
+
++*In[84]:*+
+[source, ipython3]
+----
+def bubbleSort(arr):
+    n = len(arr)
+ 
+    # Traverse through all array elements
+    for i in range(n):
+ 
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
+ 
+            # traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+bubbleSort(Final_List)
+print(Final_List)
+----
+
+
++*Out[84]:*+
+----
+[10, 10, 11, 11, 11, 21, 21, 45, 45, 66, 66, 93, 93, 113, 113, 113]
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
