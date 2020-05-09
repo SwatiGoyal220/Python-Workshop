@@ -1,0 +1,104 @@
+= NAME: Swati goyal
+
+= Class: Btech CSE 4b
+
+= Roll no.: 2k18CSUN01042
+
+= Theoretical Questions:
+
+=== 1. What is the syntax to call a constructor of a base class from
+child class
+
+Ans: To call the constructor of a base class from child class , the
+following syntax is used to in the child class:
+
+here, `ParentClassName' denoters name of parent class,
+`ParentClassConstructorName' denotes name of constructor of parent class
+to be called and `parameters' denote the parameters of that constructor
+
+....
+  ParentClassName.ParentClassConstructorName(self, parameters)
+....
+
+== 2. How is a class made as inherited class (syntax of child class)
+
+Ans: class ChildClassName(ParentClassName): def MethodName(self,
+parameters): #define method
+
+== 3. Print an element of a nested dictionary
+
+people = \{1: \{`name': `John', `age': `27', `sex': `Male'}, 2:
+\{`name': `Marie', `age': `22', `sex': `Female'}}
+
+print(people[1][`name'])
+
+= Programming Questions-
+
+= SET C
+
+=== 1. Write a program that calculates and prints the value according to
+the formula given below. Take three values from user. Q= square root ((
+2 * value1 * value2) / value3)
+
+
++*In[12]:*+
+[source, ipython3]
+----
+import math
+value1=int(input('Enter value 1: '))
+value2=int(input('ENter value 2: '))
+value3=int(input('ENter value 3: '))
+q=0.0
+q=math.sqrt(((2*value1*value2)/value3))
+print(q)
+
+----
+
+
++*Out[12]:*+
+----
+Enter value 1: 3
+ENter value 2: 3
+ENter value 3: 2
+3.0
+----
+
+=== 2. Please write a program which accepts a string from console and
+print the characters that have even indexes.
+
+
++*In[2]:*+
+[source, ipython3]
+----
+print("Please enter text to print::")
+inputchars = input()
+
+if inputchars:
+    string = ""
+    for i in inputchars:
+        if inputchars.index(i)%2 == 0:
+            string += str(i)
+    print('-------------------')
+    print("You Entered:", inputchars)
+    print("Result:")
+    print(string)
+
+----
+
+
++*Out[2]:*+
+----
+Please enter text to print::
+This is python pt3
+-------------------
+You Entered: This is python pt3
+Result:
+Ti i pto pt
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
