@@ -8,3 +8,4 @@ File9: Lerning Python Classes
 PT3: Practical questions for pt3 exam
 File 10: Learning inheritance
 File7: Learning functions
+File6: Learning Dictionary
