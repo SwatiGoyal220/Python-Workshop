@@ -1,0 +1,217 @@
++*In[1]:*+
+[source, ipython3]
+----
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+dic3={5:50,6:60}
+dic4 = {}
+for d in (dic1, dic2, dic3): dic4.update(d)
+print(dic4)
+----
+
+
++*Out[1]:*+
+----
+{1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+----
+
+
++*In[2]:*+
+[source, ipython3]
+----
+Dict = {} 
+print("Empty Dictionary: ") 
+print(Dict)
+----
+
+
++*Out[2]:*+
+----
+Empty Dictionary: 
+{}
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+d ={1:"aditya",2:"akash",3:"vivek"}
+print(d)
+----
+
+
++*Out[3]:*+
+----
+{1: 'aditya', 2: 'akash', 3: 'vivek'}
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+d ={1:"aditya",'a':"akash",'$':"vivek"}
+print(d)
+----
+
+
++*Out[4]:*+
+----
+{1: 'aditya', 'a': 'akash', '$': 'vivek'}
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+d ={1:"aditya",2:"akash",3:"vivek"}
+print(d)
+d[1] = "anmol"
+d[4] = "vinay" 
+d[5] = "Vishal"
+print(d.items())
+----
+
+
++*Out[5]:*+
+----
+{1: 'aditya', 2: 'akash', 3: 'vivek'}
+dict_items([(1, 'anmol'), (2, 'akash'), (3, 'vivek'), (4, 'vinay'), (5, 'Vishal')])
+----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+dd ={1:"a",2:"b",3:"c"}
+dd.clear()
+print(dd)
+----
+
+
++*Out[6]:*+
+----
+{}
+----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+d ={1:"aditya",2:"akash",3:"Swati"}
+for key,value in d.items():
+    print(key, value)
+----
+
+
++*Out[8]:*+
+----
+1 aditya
+2 akash
+3 Swati
+----
+
+
++*In[9]:*+
+[source, ipython3]
+----
+d1={"A":1,"B":2}
+d2={"C":3,"D":4}
+d3={}
+for items in (d1,d2):
+    d3.update(items)
+    print(d3)
+----
+
+
++*Out[9]:*+
+----
+{'A': 1, 'B': 2}
+{'A': 1, 'B': 2, 'C': 3, 'D': 4}
+----
+
+
++*In[10]:*+
+[source, ipython3]
+----
+d1={1:"A",2:"B",3:[11,12,13,14], 4:(15,16),5:{'a':20,'b':30}}
+print(d1[5]['a'])
+----
+
+
++*Out[10]:*+
+----
+20
+----
+
+
++*In[11]:*+
+[source, ipython3]
+----
+d=dict()
+for value in range(1,5):
+    d[value]=value*5
+print(d)
+----
+
+
++*Out[11]:*+
+----
+{1: 5, 2: 10, 3: 15, 4: 20}
+----
+
+
++*In[12]:*+
+[source, ipython3]
+----
+d=dict()
+for x in range(1,5):
+    d[x]=x**2
+print(d)
+----
+
+
++*Out[12]:*+
+----
+{1: 1, 2: 4, 3: 9, 4: 16}
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+sum =0
+for key,value in d.items():
+    sum = sum+ value
+print(sum)
+----
+
+
++*Out[13]:*+
+----
+30
+----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+d=dict()
+value =1
+for key in range(1,8):
+    value=value*key
+    d[key]=value
+print(d)
+----
+
+
++*Out[15]:*+
+----
+{1: 1, 2: 2, 3: 6, 4: 24, 5: 120, 6: 720, 7: 5040}
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
