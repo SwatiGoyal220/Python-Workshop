@@ -6,3 +6,4 @@ File4: Learning tuple
 Pt2: Practical questions
 File9: Lerning Python Classes
 PT3: Practical questions for pt3 exam
+File 10: Learning inheritance
