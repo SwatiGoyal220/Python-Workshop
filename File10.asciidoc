@@ -1,0 +1,251 @@
+= Name: Swati Goyal
+
+= Class: Btech CSE 4B
+
+= Roll No.: 2k18CSUN01042
+
+=== 1. Write a Python program that has a class Animal with a method
+legs(). Create two subclasses Tiger and Dog, access the method leg
+explicitly with class Dog and implicitly with the class Tiger.
+
+
++*In[14]:*+
+[source, ipython3]
+----
+class Animal:
+    name = ""
+    def __init__(self,name):
+        self.name = name
+    def legs(self):
+        print("I am a " +self.name+ "i have strong legs")
+
+# explicit access
+class Tiger(Animal):
+    def __init__(self,name):
+        Animal.__init__(name)
+        
+# implicit access    
+class Dog(Animal):
+    def __init__(self,name):
+        self.name=super().__init__(name)
+    def legs(self):
+            print("I am a " +self.name+ "i have strong legs")
+    
+    
+#explicit access
+x = Tiger("bengaltiger")
+Animal.legs()
+
+#implicit access
+y = Dog("BengalTiger")
+y.legs()
+
+
+----
+
+
++*Out[14]:*+
+----
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-14-8b319a587b86> in <module>
+         20 
+         21 #explicit access
+    ---> 22 x = Tiger("bengaltiger")
+         23 Animal.legs()
+         24 
+    
+
+    <ipython-input-14-8b319a587b86> in __init__(self, name)
+          9 class Tiger(Animal):
+         10     def __init__(self,name):
+    ---> 11         Animal.__init__(name)
+         12 
+         13 # implicit access
+    
+
+    TypeError: __init__() missing 1 required positional argument: 'name'
+
+----
+
+=== 2. Write a Python program to create a class Employee. Define two
+subclasses:Engineer and Manager. Every class should have method named
+printDesignation() that prints Engineer for Engineer class and Manager
+for Manager Class.
+
+
++*In[8]:*+
+[source, ipython3]
+----
+class Employee:
+    #it a good practice to define valriable in a class
+    designation=""
+    def __init__(self,designation):
+        self.designation = designation
+    def printDesignation(self):
+        print(self.designation)
+        
+class Engineer(Employee):
+    def __init__(self,designation):
+        super().__init__(designation)
+        
+    def printDesignation(self):
+        print(self.designation)
+
+class Manager(Employee):
+    def __init__(self,designation):
+        super().__init__(designation)
+        
+        def printDesignation(self):
+            print(self.designation)
+# argument has to be passed as string as designation is string
+obj1 = Engineer("Engineer")
+obj1.printDesignation()
+
+obj2 = Manager("Manager")
+obj2.printDesignation()
+
+----
+
+
++*Out[8]:*+
+----
+Engineer
+Manager
+----
+
+=== 3. Write a Python program to demonstrate classes and their
+attributes.
+
+
++*In[3]:*+
+[source, ipython3]
+----
+class human(object):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def intro(self):
+        print("Hello my name is " +self.name+ " and i am " +str(self.age)+ " years old ")
+        
+class person(human):
+    pass
+        
+p = person("SWATI GOYAL",19)
+p.intro()
+
+----
+
+
++*Out[3]:*+
+----
+Hello my name is SWATI GOYAL and i am 19 years old 
+----
+
+=== 4. Write a Python program to demonstrate Inheritance and method
+overriding.
+
+
++*In[4]:*+
+[source, ipython3]
+----
+class square:
+    def __init__(self,l):
+        self.length = l
+        
+    def print(self):
+        print("side of square is", self.length)
+        
+    def area(self):
+        print("Area of square is", self.length * self.length)
+        
+class rectangle(square):
+
+    def __init__(self,l,b):
+        super().__init__(l)
+        
+        self.breadth = b
+        
+        def print(self):
+            print("breadth of rectangle", self.breadth)
+        
+        def area(self):
+            print("Area of rectangle", self.length * self.breadth)
+        
+p = square(2)
+p.print()
+p.area()
+
+c = rectangle(4,8)
+c.print()
+c.area()
+----
+
+
++*Out[4]:*+
+----
+side of square is 2
+Area of square is 4
+side of square is 4
+Area of square is 16
+----
+
+=== 5. Write a Python program to demonstrate multiple Inheritance.
+
+
++*In[7]:*+
+[source, ipython3]
+----
+class parent1(object):
+    def __init__(self):
+        self.member1 = "Swati"
+    def f1(self):
+        print("I AM PARENT 1 ")
+        
+class parent2(object):
+    def __init__(self):
+        self.member2 = "Goyal"
+    def f2(self):
+        print("I AM PARENT 2")
+        
+class child(object):
+    def __init__(self):
+        
+        parent1.__init__(self)
+        parent2.__init__(self)
+        
+    def f3(self):
+        print("I AM THE CHILD")
+            
+    def print_members(self):
+        print(self.member1,self.member2)
+
+p1 = parent1()
+p1.f1()
+p2 = parent2()
+p2.f2()
+
+obj = child()
+obj.f3()
+obj.print_members()
+
+----
+
+
++*Out[7]:*+
+----
+I AM PARENT 1 
+I AM PARENT 2
+I AM THE CHILD
+Swati Goyal
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
