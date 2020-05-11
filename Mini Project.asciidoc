@@ -1,0 +1,54 @@
+== Team members:
+
+=== Swati goyal 2k18CSUN01042
+
+=== Gauri verma 2k18CSUN01017
+
+= Project title: Validate phone numbers
+
+
++*In[11]:*+
+[source, ipython3]
+----
+num=input('Enter the phone number: ')
+----
+
+
++*Out[11]:*+
+----
+Enter the phone number: 1548723694598
+----
+
+
++*In[12]:*+
+[source, ipython3]
+----
+array = list(map(int, str(num))) 
+----
+
+
++*In[14]:*+
+[source, ipython3]
+----
+if len(array)==13:
+    if array[0]==1 or array[0]==2:
+        print('Phone number is valid')
+    else: 
+        print('Phone number must start from either 1 or 2 ')
+else:
+    print('Invalid phone number as length of phone number must be 13')
+
+----
+
+
++*Out[14]:*+
+----
+Phone number is valid
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
