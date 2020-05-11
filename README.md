@@ -10,3 +10,4 @@ File 10: Learning inheritance
 File7: Learning functions
 File6: Learning Dictionary
 Mini Project: validate pho0one numbers
+Mini project video: Working of the project
